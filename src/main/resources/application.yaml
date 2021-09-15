@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+  servlet:
+    session:
+      timeout: 60m
+
+spring:
+  profiles:
+    active: default
+  data:
+    elasticsearch:
+    cluster-name: elasticsearch
+    cluster-nodes: localhost:9200
+
+  application:
+    name: elastic-search
+  banner:
+    location: classpath:banner/banner.txt
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+    groups-order: asc
+
+converter:
+  startport: 2002
+  portscount: 2
+
+libreoffice:
+  path: C:\\Program Files\\LibreOffice
+
+file:
+  temp-path: C:\\Users\\solyanin\\IdeaProjects\\my-testing-only-repositories(non-work)\\elastic-search-files\\src\\main\\resources\\cache\\temp
+  pdf-path: C:\\Users\\solyanin\\IdeaProjects\\my-testing-only-repositories(non-work)\\elastic-search-files\\src\\main\\resources\\cache\\pdf.pdf
